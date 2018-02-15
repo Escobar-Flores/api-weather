@@ -1,0 +1,29 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "aplicación sobre el clima en un determinado lugar",
+  "scripts": {
+    "build": "babel src -d public/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Escobar-Flores/api-weather.git"
+  },
+  "keywords": [
+    "api",
+    "weather"
+  ],
+  "author": "R. EScobar y M. Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Escobar-Flores/api-weather/issues"
+  },
+  "homepage": "https://github.com/Escobar-Flores/api-weather#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
