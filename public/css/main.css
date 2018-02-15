@@ -6,14 +6,9 @@
   min-height: 100vh;
 };
 
-.outline{
-  border: 2px solid red;
-  background: pink;
-}
-
 .img-size {
   width: 200px;
-
+  height: 200px;
 }
 
 .m-0{
@@ -34,5 +29,7 @@
   align-content: center;
   justify-content: center;
 }
+
+
 
 
