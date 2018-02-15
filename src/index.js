@@ -1,8 +1,8 @@
 
 // funcion que obtiene el clima :
-
+const daysWeek = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 function getWeather(data) {
-  let route = data.daily.data[0];
+  let route = data.currently;
   // utilizando la data
   let icon = route.icon;
   let template = `<img src="../../assets/images/${icon}.png" alt="" class="img-size">`; 
@@ -10,7 +10,7 @@ function getWeather(data) {
   let speedWind = route.windSpeed + ' m/s';
   let humidity = (route.humidity * 100) + ' %';
   let uvIndex = route.uvIndex;
-  let maxTemp = ((route.apparentTemperatureMax - 32) / 1.8).toFixed(0) + '°';
+  let maxTemp = ((route.temperature - 32) / 1.8).toFixed(0) + '°';
   let pressure = route.pressure + ' Pa';
   // llamando los elementos del dom y agregando los valores de la data:
   $('.max-temp-js').text(maxTemp);
@@ -20,7 +20,29 @@ function getWeather(data) {
   $('.uv-index-js').text(uvIndex);
   $('.pressure-js').text(pressure);
   $('.container-image-js').append(template);
+  // para el clima semanal:
+  
+  
+  $('.week-js').on('click', ()=>{
+    let imageDaily = $('.image-daily-js');
+    let icon2 = data.daily.icon;
+    console.log(icon2)
+    let template = `<img src="../../assets/images/${icon2}.png" alt="" class="img-size">`;
+    imageDaily.append(template);
+    let array = data.daily.data.slice(0, 7);
+    console.log();
+    array.forEach((element, index)=>{
+      let container = $('.container-days-js');
+      let template = `<p class="text-white text-center d-flex justify-content-between"> <strong> <img src="../../assets/images/${element.icon}.png" alt="" class="icon-size"> ${daysWeek[index]}</strong>  <strong> ${((element.apparentTemperatureMin - 32) / 1.8).toFixed(0)}° - ${((element.apparentTemperatureMax - 32) / 1.8).toFixed(0)}°</strong></p>`;
+      container.append(template);
+    });
+  }); 
 };
+// redireccionando vista :
+$('.redirection-js').on('click', () => {
+  window.location.href = '../weekly/index.html';
+});
+
 
 // Obtener ubicación actual de usuario
 
@@ -30,6 +52,7 @@ function initMap() {
       navigator.geolocation.getCurrentPosition(functionSuccess, functionError);
     };
   };
+
   
   document.getElementById('btn').addEventListener('click', search);
   
