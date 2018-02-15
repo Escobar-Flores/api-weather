@@ -20,21 +20,35 @@
     <div class="row m-t d-flex justify-content-center">
       <div class="col-12 col-sm-8 bg-rgba rounded">
         <div class="row">
-          <div class="col-12  d-flex justify-content-center ">
-              <img src="../../assets/images/icon-1.png" alt="" class="img-size">
-             
+          <div class="col-12  d-flex justify-content-center container-image-js">
           </div>
         </div>
         <div class="row container-fluid m-0">
           <div class="col-12">
-              <h2 class="text-center text-white text-natacion display-2">18°</h2>
-            <p class="text-white text-center d-flex justify-content-around">Wind  <strong>3m/s</strong></p>
-            <p  class="text-white text-center d-flex justify-content-around">Humidity <strong>82%</strong></p>
-            <p  class="text-white text-center d-flex justify-content-around">UV Index <strong>1</strong></p>
-            <p  class="text-white text-center d-flex justify-content-around ">Pressure <strong>1017hPa</strong></p>
+            <h2 class="text-center text-white text-natacion">
+              <strong class="display-2 max-temp-js">18°</strong>
+              <small class="">máx.</small>
+            </h2>
+            <p class="text-center text-white ">
+              <i class="summary-js"></i>
+            </p>
+            <br>
+            <p class="text-white text-center d-flex justify-content-around ">Wind
+              <strong class="speed-wind-js">3m/s</strong>
+            </p>
+            <p class="text-white text-center d-flex justify-content-around">Humidity
+              <strong class="humidity-js">82%</strong>
+            </p>
+            <p class="text-white text-center d-flex justify-content-around">UV Index
+              <strong class="uv-index-js">1</strong>
+            </p>
+            <p class="text-white text-center d-flex justify-content-around ">Pressure
+              <strong class="pressure-js">1017hPa</strong>
+            </p>
 
           </div>
-          <br><br>
+          <br>
+          <br>
           <button class="btn btn-secondary btn-block">Predicción de la semana</button>
 
         </div>
@@ -47,7 +61,8 @@
   <!--JQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap -->
-  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../js/index.js"></script>
 </body>
 
 </html>
