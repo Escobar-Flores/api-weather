@@ -1,63 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-grid.min.css">
-  <!-- Styles CSS -->
-  <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-
-  <div class="w-100 bg-image flex-box ">
-
-    <div class="row m-t d-flex justify-content-center">
-      <div class="col-12 col-sm-8 bg-rgba rounded">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="assets/images/icon-1.png" class="img-size">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-grid.min.css">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="css/main.css">  
+  </head>
+  <body class="bg-image d-flex align-items-center">
+    <section class="container-fluid">
+      <div class="d-flex justify-content-center">
+        <div class="bg-rgba rounded">
+          <h2 class="text-white text-center my-5 mx-4">¿Cuál es el clima de hoy?</h2>
+          <div class="d-flex justify-content-center m-5">
+            <button type="button" id="btn" class="btn btn-info">Obtener información</button>
           </div>
         </div>
-        <div class="row container-fluid m-0">
-          <div class="col-12">
-            <h2 class="text-center text-white text-natacion display-2">18°</h2>
-            <p class="text-white text-center d-flex justify-content-around">Wind
-              <strong>3m/s</strong>
-            </p>
-            <p class="text-white text-center d-flex justify-content-around">Humidity
-              <strong>82%</strong>
-            </p>
-            <p class="text-white text-center d-flex justify-content-around">UV Index
-              <strong>1</strong>
-            </p>
-            <p class="text-white text-center d-flex justify-content-around ">Pressure
-              <strong>1017hPa</strong>
-            </p>
-
-          </div>
-          <br>
-          <br>
-          <button class="btn btn-secondary btn-block break-word">Predicción de la semana</button>
-
-        </div>
-        <br>
       </div>
-    </div>
-
-  </div>
-
-
-
-  <!--JQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
+    </section>
+    <!--JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Api google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZmApOQc5xq5rLmkqiOpGG7sqcs7_Z7L4&callback=initMap&libraries=places" async defer></script>
+    <!-- js -->
+    <script src="js/index.js"></script>
+  </body>
 </html>
