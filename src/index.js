@@ -21,26 +21,27 @@ function getWeather(data) {
   $('.pressure-js').text(pressure);
   $('.container-image-js').append(template);
   // para el clima semanal:
-  
-  
-  $('.week-js').on('click', ()=>{
-    let imageDaily = $('.image-daily-js');
-    let icon2 = data.daily.icon;
-    console.log(icon2)
-    let template = `<img src="../../assets/images/${icon2}.png" alt="" class="img-size">`;
-    imageDaily.append(template);
-    let array = data.daily.data.slice(0, 7);
-    console.log();
-    array.forEach((element, index)=>{
-      let container = $('.container-days-js');
-      let template = `<p class="text-white text-center d-flex justify-content-between"> <strong> <img src="../../assets/images/${element.icon}.png" alt="" class="icon-size"> ${daysWeek[index]}</strong>  <strong> ${((element.apparentTemperatureMin - 32) / 1.8).toFixed(0)}° - ${((element.apparentTemperatureMax - 32) / 1.8).toFixed(0)}°</strong></p>`;
-      container.append(template);
-    });
-  }); 
+  let imageDaily = $('.image-daily-js');
+  let icon2 = data.daily.icon;
+  console.log(icon2);
+  let template2 = `<img src="../../assets/images/${icon2}.png" alt="" class="img-size">`;
+  imageDaily.append(template2);
+  let array = data.daily.data.slice(0, 7);
+  console.log();
+  array.forEach((element, index)=>{
+    let container = $('.container-days-js');
+    let template3 = `<p class="text-white text-center d-flex justify-content-between"> <strong> <img src="../../assets/images/${element.icon}.png" alt="" class="icon-size"> ${daysWeek[index]}</strong>  <strong> ${((element.apparentTemperatureMin - 32) / 1.8).toFixed(0)}° - ${((element.apparentTemperatureMax - 32) / 1.8).toFixed(0)}°</strong></p>`;
+    container.append(template3);
+  });
 };
-// redireccionando vista :
+// redireccionando vistas :
 $('.redirection-js').on('click', () => {
   window.location.href = '../weekly/index.html';
+  weekly(data);
+});
+
+$('.back-js').on('click', () => {
+  window.location.href = '../daily/index.html';
 });
 
 
