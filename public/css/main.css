@@ -1,17 +1,18 @@
-.bg-image{
+.bg-image {
   background-image: url('../assets/images/bg-1.png');
+  background-position:center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:center center;
+  
   min-height: 100vh;
 }
 
-.img-size {
-  width: 200px;
+.img-size {  
   height: 200px;
+  width: 200px;
 }
 
-.m-0{
+.m-0 {
   margin: 0;
 }
 
@@ -19,28 +20,27 @@
   background-color: rgba(63, 63, 63, 0.603)
 }
 
-.m-t{
+.m-t {
   margin: 3vh 0;
 }
 
 .flex-box {
-  display: flex;
-  flex-flow: column;
   align-content: center;
+  display: flex;
+  flex-flow: column;  
   justify-content: center;
 }
 
-.sunny{
+.sunny {
   color:#F9FF0B;
 }
 
-.border-white{
+.border-white {
   border: 1px solid #fff;
 }
 
 .icon-size {
-  width: 30px;
-  height: 30px;
   display: inline;
+  height: 30px;  
+  width: 30px;
 }
-
